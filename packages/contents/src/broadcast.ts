@@ -60,6 +60,11 @@ export class BroadcastChannelWrapper implements IBroadcastChannelWrapper {
     const { _contents } = this;
     const request = event.data;
     const path = request?.path;
+    const sender = (request as any)?.sender;
+
+    if (sender !== 'drivefs.ts') {
+      return;
+    }
 
     // many successful responses default to null
     let response: any = null;
