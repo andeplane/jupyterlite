@@ -150,8 +150,7 @@ export class BroadcastChannelWrapper implements IBroadcastChannelWrapper {
         });
         break;
       default:
-        response = null as never;
-        break;
+        return;
     }
 
     this._channel.postMessage(response);

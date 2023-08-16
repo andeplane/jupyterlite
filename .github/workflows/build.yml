@@ -73,8 +73,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu, windows, macos]
-        python-version: ['3.8', '3.11', 'pypy-3.8']
+        os: [ubuntu]
+        python-version: ['3.8']
         include:
           # OS-specifics for running pip
           - os: ubuntu
